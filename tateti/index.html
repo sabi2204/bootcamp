@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TATETI</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<h1>TA-TE-TI</h1>
+
+<section id="seleccion">
+    <h2>Selecciona modo de juego</h2>
+    <input type="radio" id="pc" name="modo" value="pc">
+    <label for="pc">Jugar contra la PC</label>
+    <br><br>
+    <input type="radio" id="amigo" name="modo" value="amigo">
+    <label for="amigo">Jugar con un amigo</label><br><br>
+
+</section>
+
+<section id="pantalla1">
+    <h2>Ingresar nombre</h2>
+    <input type="text" id="j1" placeholder="Jugador">
+    <br><br>
+    <button onclick= "iniciarPC()">Iniciar Juego</button>
+</section>
+<section id="fichas-pc">
+    <h2>Elegir ficha</h2>
+
+    <input type="radio" id="pc-x" name="ficha-pc" value="X">
+    <label for="pc-x">Jugar con X</label>
+
+    <input type="radio" id="pc-o" name="ficha-pc" value="O">
+    <label for="pc-o">Jugar con O</label>
+    <button onclick="confirmarFichas()">Comenzar</button>
+</section>
+
+<section id="pantalla2">
+    <h2>Ingresar nombres</h2>
+    <input type="text" id="j1a" placeholder="Jugador 1">
+    <input type="text" id="j2" placeholder="Jugador 2"><br><br>
+    <button onclick= "iniciarAmigo()">Iniciar Juego</button>
+</section>
+<section id="fichas-amigo">
+    <h2>Elegir fichas</h2>
+    <p>
+        <input type="radio" id="x-j1" name="ficha" value="j1">
+        <label for="x-j1">Jugador 1 juega con X</label>
+    </p>
+    <p>
+        <input type="radio" id="x-j2" name="ficha" value="j2">
+        <label for="x-j2">Jugador 2 juega con X</label>
+    </p>
+    <br><br>
+    <button onclick="confirmarFichas()">Comenzar</button>
+</section>
+
+
+<table>
+    <tr>
+        <td onclick="jugar(0)"></td>
+        <td onclick="jugar(1)"></td>
+        <td onclick="jugar(2)"></td>
+    </tr>
+    <tr>
+        <td onclick="jugar(3)"></td>
+        <td onclick="jugar(4)"></td>
+        <td onclick="jugar(5)"></td>
+    </tr>
+    <tr>
+        <td onclick="jugar(6)"></td>
+        <td onclick="jugar(7)"></td>
+        <td onclick="jugar(8)"></td>
+    </tr>
+</table>
+<script src="script.js"></script>
+</body>
+</html>
